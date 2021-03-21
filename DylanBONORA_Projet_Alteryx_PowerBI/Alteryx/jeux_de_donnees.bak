@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="90" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">D:\Ecole\DataScientist\Cours\DataManagement\Projet_Alteryx\Data_set\TP\jcdecaux-bike-stations-data-rt.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>;</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>65001</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>jcdecaux-bike-stations-data-rt.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="number" size="254" source="File: D:\Ecole\DataScientist\Cours\DataManagement\Projet_Alteryx\Data_set\TP\jcdecaux-bike-stations-data-rt.csv" type="V_WString" />
+            <Field name="name" size="254" source="File: D:\Ecole\DataScientist\Cours\DataManagement\Projet_Alteryx\Data_set\TP\jcdecaux-bike-stations-data-rt.csv" type="V_WString" />
+            <Field name="address" size="254" source="File: D:\Ecole\DataScientist\Cours\DataManagement\Projet_Alteryx\Data_set\TP\jcdecaux-bike-stations-data-rt.csv" type="V_WString" />
+            <Field name="position" size="254" source="File: D:\Ecole\DataScientist\Cours\DataManagement\Projet_Alteryx\Data_set\TP\jcdecaux-bike-stations-data-rt.csv" type="V_WString" />
+            <Field name="banking" size="254" source="File: D:\Ecole\DataScientist\Cours\DataManagement\Projet_Alteryx\Data_set\TP\jcdecaux-bike-stations-data-rt.csv" type="V_WString" />
+            <Field name="bonus" size="254" source="File: D:\Ecole\DataScientist\Cours\DataManagement\Projet_Alteryx\Data_set\TP\jcdecaux-bike-stations-data-rt.csv" type="V_WString" />
+            <Field name="status" size="254" source="File: D:\Ecole\DataScientist\Cours\DataManagement\Projet_Alteryx\Data_set\TP\jcdecaux-bike-stations-data-rt.csv" type="V_WString" />
+            <Field name="Contract Name" size="254" source="File: D:\Ecole\DataScientist\Cours\DataManagement\Projet_Alteryx\Data_set\TP\jcdecaux-bike-stations-data-rt.csv" type="V_WString" />
+            <Field name="Bike Stands" size="254" source="File: D:\Ecole\DataScientist\Cours\DataManagement\Projet_Alteryx\Data_set\TP\jcdecaux-bike-stations-data-rt.csv" type="V_WString" />
+            <Field name="Available Bike Stands" size="254" source="File: D:\Ecole\DataScientist\Cours\DataManagement\Projet_Alteryx\Data_set\TP\jcdecaux-bike-stations-data-rt.csv" type="V_WString" />
+            <Field name="Available Bikes" size="254" source="File: D:\Ecole\DataScientist\Cours\DataManagement\Projet_Alteryx\Data_set\TP\jcdecaux-bike-stations-data-rt.csv" type="V_WString" />
+            <Field name="Last Update" size="254" source="File: D:\Ecole\DataScientist\Cours\DataManagement\Projet_Alteryx\Data_set\TP\jcdecaux-bike-stations-data-rt.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings>
+        <Position x="186" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"number","name","address","banking","Contract Name","Bike Stands","Available Bike Stands","Available Bikes"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="342" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Contract Name</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2021-02-24 16:48:17</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2021-02-24 16:48:17</StartDate>
+              <EndDate>2021-02-24 16:48:17</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Contract Name] = ""</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output26" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>jeux_de_donnees</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
